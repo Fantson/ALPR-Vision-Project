@@ -41,7 +41,7 @@ def segment_characters(binary_plate):
         x, y, w, h = cv2.boundingRect(cnt)
         aspect_ratio = w / float(h)
         area = w * h
-        if 800 < area < 20000 and 0.25 < aspect_ratio < 1.3:
+        if 2000 < area < 20000 and 0.25 < aspect_ratio < 1.3:
             char_boxes.append((x, y, w, h))
 
     char_boxes = sorted(char_boxes, key=lambda b: b[0])
