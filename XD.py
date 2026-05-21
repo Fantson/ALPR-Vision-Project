@@ -282,7 +282,11 @@ def recognize_characters(
 
         # Dynamiczne generowanie nazwy pliku zależnie od tego, czy oczekiwany tekst istnieje
         if expected_text:
-            out_filename = f"summary_{img_num}_{expected_text}.png"
+            # SPRAWDZENIE CZY WYNIK JEST BŁĘDNY
+            if recognized_text != expected_text:
+                out_filename = f"summary_{img_num}_F_{expected_text}.png"
+            else:
+                out_filename = f"summary_{img_num}_P_{expected_text}.png"
         else:
             out_filename = f"summary_{img_num}.png"
 
