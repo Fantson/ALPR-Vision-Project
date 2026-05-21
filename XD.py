@@ -26,7 +26,7 @@ def segment_characters(binary_plate):
         x, y, w, h = cv2.boundingRect(cnt)
         aspect_ratio = w / float(h)
         area = w * h
-        if 800 < area < 20000 and 0.25 < aspect_ratio < 1.3:
+        if 1300 < area < 20000 and 0.15 < aspect_ratio < 1.3:
             char_boxes.append((x, y, w, h))
             
     char_boxes = sorted(char_boxes, key=lambda b: b[0])
@@ -54,7 +54,8 @@ def recognize_characters(characters, templates):
                 best_match = char_name
                 
         if best_score > 0.3:
-            recognized_text += best_match
+            prawdziwy_znak = best_match.split('_')[0]
+            recognized_text += prawdziwy_znak
             
     return recognized_text
 
