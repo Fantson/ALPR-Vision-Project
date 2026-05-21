@@ -1,6 +1,10 @@
 # Direnv
 .direnv/
 
+# IDE
+.zed/
+.vscode/
+
 # Debug
 diffs/
 
