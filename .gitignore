@@ -1,6 +1,9 @@
 # Direnv
 .direnv/
 
+# Debug
+diffs/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
