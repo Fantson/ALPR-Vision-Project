@@ -2,7 +2,8 @@ import cv2
 import pytesseract
 import sys
 
-pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+if sys.platform.startswith('win'):
+    pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 
 def rozpoznaj_tesseract(sciezka_do_obrazka):
     img = cv2.imread(sciezka_do_obrazka)
