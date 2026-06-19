@@ -12,7 +12,7 @@
 Celem projektu jest stworzenie systemu do odczytu numerów rejestracyjnych z polskich, białych tablic. System wykorzystuje klasyczne metody wizji komputerowej (OpenCV). Zamiast automatycznej detekcji całego auta, zastosowano interaktywne zaznaczanie narożników tablicy. 
 
 **Główne etapy działania potoku (pipeline):**
-1. Interaktywna lokalizacja i transformacja perspektywiczna (Warping do 540x114 px).
+1. Interaktywna lokalizacja i transformacja perspektywiczna (Warping do 520x114 px).
 2. Pre-processing: Konwersja do skali szarości, wyrównanie kontrastu (CLAHE), rozmycie Gaussa i binaryzacja Otsu.
 3. Ekstrakcja znaków (analiza konturów).
 4. Rozpoznawanie znaków (własny algorytm dopasowywania szablonów oraz model referencyjny Tesseract OCR).
