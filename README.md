@@ -84,7 +84,7 @@ Uruchom skrypt ewaluacyjny:
     ```bash
     python evaluate.py
     ```
-Program uruchomi równolegle autorski algorytm segmentacji i dopasowania szablonów (XD.py) oraz model referencyjny (tesseract_test.py) dla każdego zdjęcia.
+Program uruchomi równolegle autorski algorytm segmentacji i dopasowania szablonów (ocr_engine.py) oraz model referencyjny (tesseract_test.py) dla każdego zdjęcia.
 
 Na koniec w konsoli wyświetli się szczegółowa tabela porównawcza oraz Raport Końcowy zawierający procent tablic odczytanych w 100% oraz dokładną skuteczność rozpoznawania pojedynczych znaków (Accuracy) dla obu metod.
 
@@ -93,7 +93,7 @@ Jeśli chcesz przetestować działanie samego algorytmu rozpoznawania znaków na
 
 Test autorskiego algorytmu szablonów:
     ```bash
-    python XD.py preprocessed_plates/1_image.png
+    python ocr_engine.py preprocessed_plates/1_image.png
     ```
 Test modelu Tesseract OCR:
     ```bash
